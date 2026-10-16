@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #17171b;
+  --color-card: #242325;
+  --color-brand: #0072ff;
+  --color-accent: #4facfe;
+  --color-hover: #1595df;
+  --font-sans: "Poppins", "Montserrat", sans-serif;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-bg font-sans text-white;
+    background-image: radial-gradient(rgba(79, 172, 254, 0.1) 1px, transparent 1px);
+    background-size: 26px 26px;
+  }
+  ::-webkit-scrollbar { width: 10px; background: #17171b; }
+  ::-webkit-scrollbar-track { background: #23243a; }
+  ::-webkit-scrollbar-thumb { background: #0072ff; border-radius: 8px; }
+  ::-webkit-scrollbar-thumb:hover { background: #4facfe; }
+}
+
+@utility grad-text {
+  background: linear-gradient(90deg, #00c6ff, #0072ff, #4facfe, #00f2fe);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility tint-hover {
+  transition: transform 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.07);
+    filter: brightness(0) saturate(100%) invert(45%) sepia(93%) saturate(527%) hue-rotate(180deg) brightness(95%) contrast(100%);
+  }
+}
+
+@layer components {
+  .nav-a { @apply relative px-2.5 py-1 text-base transition-colors hover:text-hover lg:text-lg after:absolute after:inset-x-2.5 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-0 after:rounded-full after:bg-hover after:transition-transform hover:after:scale-x-100; }
+  .lang-btn { @apply rounded-full px-3 py-0.5 text-sm font-medium transition-colors hover:text-hover; }
+  .lang-btn.active { background: #0072ff; color: #fff; }
+  .sec-title { @apply relative text-4xl font-bold text-brand md:text-5xl; }
+  .sec-sub { @apply relative mb-8 mt-1 text-xl font-bold text-accent md:text-3xl; }
+  .card { @apply rounded-2xl bg-card; }
+  .btn { @apply inline-block cursor-pointer rounded-full border-2 border-accent bg-bg text-center font-bold text-white transition hover:scale-105 hover:bg-accent hover:text-[#333]; }
+  .badge { @apply inline-flex items-center rounded-xl border border-accent bg-accent px-2.5 py-0.5 text-black transition hover:scale-105; }
+  .field { @apply w-full rounded-[10px] border border-gray-300 bg-card px-4 py-3 font-sans text-base text-white; }
+}
+
+/* Animaciones de entrada */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(-60px);
+  transition: opacity 1.2s cubic-bezier(0.77, 0, 0.18, 1), transform 1.4s cubic-bezier(0.77, 0, 0.18, 1);
+}
+.reveal-up.visible { opacity: 1; transform: translateY(0); }
+
+@keyframes hero-in { to { opacity: 1; transform: translateX(0); } }
+.hero-left { opacity: 0.3; transform: translateX(-100vw); animation: hero-in 0.9s cubic-bezier(0.77, 0, 0.18, 1) 0.2s forwards; }
+.hero-right { opacity: 0.3; transform: translateX(100vw); animation: hero-in 0.9s cubic-bezier(0.77, 0, 0.18, 1) 0.5s forwards; }
+
+/* Colores de tecnologías (usados dentro de los textos) */
+.color-sfml { color: #1e920f; font-weight: 700; }
+.color-css { color: #264de4; font-weight: 700; }
+.color-html { color: #e44d26; font-weight: 700; }
+.color-c { color: #1c49dd; font-weight: 700; }
+.color-csharp { color: #662bf0; font-weight: 700; }
+.color-js { color: #f7df1e; font-weight: 700; }
+.color-asp { color: #3567f0; font-weight: 700; }
+.color-sql { color: #f31818; font-weight: 700; }
+
+.field:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #242325 inset !important;
+  -webkit-text-fill-color: #fff !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Bandas de sección: fondos que separan visualmente cada bloque */
+.band-alt {
+  position: relative;
+  background: linear-gradient(180deg, #1e1f28 0%, #1a1a21 100%);
+  border-block: 1px solid rgba(79, 172, 254, 0.14);
+}
+.band-alt::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(60% 55% at 90% 0%, rgba(0, 114, 255, 0.2), transparent 70%);
+}
+.band-glow {
+  background: radial-gradient(70% 60% at 50% 100%, rgba(0, 114, 255, 0.2), transparent 70%);
+}
+.sec-num {
+  position: absolute;
+  top: 1rem;
+  right: 4%;
+  font-size: clamp(6rem, 16vw, 12rem);
+  font-weight: 800;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(79, 172, 254, 0.25);
+  pointer-events: none;
+  user-select: none;
+}

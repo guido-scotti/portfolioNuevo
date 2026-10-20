@@ -5,7 +5,7 @@ export const i18n = {
     nav: { home: "Home", about: "About", training: "Training", projects: "Projects", contact: "Contact" },
     hero: {
       hi: "Hi, i'm",
-      title: "I'm a front-end web developer!",
+      title: "I'm a fullstack developer!",
       cv: "RESUME",
       cvUrl: "https://drive.google.com/file/d/1LvZQu51Tj20JlG6BtmFPSeKmocJtHa75/view?usp=sharing",
     },
@@ -57,7 +57,7 @@ export const i18n = {
     nav: { home: "Inicio", about: "Sobre mí", training: "Formación", projects: "Proyectos", contact: "Contacto" },
     hero: {
       hi: "Hola, soy",
-      title: "Soy un desarrollador web front-end!",
+      title: "Soy un desarrollador fullstack!",
       cv: "CV",
       cvUrl: "https://drive.google.com/file/d/1FtYuSq23XpQSbJeLT6-ZBJPhRRFq_b2f/view?usp=sharing",
     },

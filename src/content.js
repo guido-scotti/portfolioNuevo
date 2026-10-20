@@ -1,3 +1,5 @@
+// Todo el contenido editable del portfolio está en este archivo.
+
 export const i18n = {
   en: {
     nav: { home: "Home", about: "About", training: "Training", projects: "Projects", contact: "Contact" },
@@ -35,16 +37,16 @@ export const i18n = {
         d: "A tower defense console game parodying Plants vs Zombies, where university professors replace the zombies. Built in <span class='color-c'>C++</span> with <span class='color-sfml'>SFML</span> for graphics, sound, and music.",
       },
       {
-        t: "CONNECT 4",
-        d: "A console-based Connect 4 game developed in <span class='color-c'>C++</span>. Players take turns dropping pieces into a vertical grid, aiming to connect four of their pieces in a row horizontally, vertically, or diagonally.",
-      },
-      {
-        t: "EL GUAPO DEL PUERTO",
-        d: "A landing page for a grill restaurant, created with <span class='color-html'>HTML</span>, <span class='color-css'>CSS</span>, and <span class='color-js'>JavaScript</span>. It features a responsive design, menu showcase and contact information.",
+        t: "GR REAL ESTATE",
+        d: "A landing page for a real estate agency, created with <span class='color-html'>HTML</span>, <span class='color-tailwind'>Tailwind</span>, and <span class='color-js'>JavaScript</span>. It features a responsive design, property showcase and contact information.",
       },
       {
         t: "RR-SCD MED",
         d: "A clinic management system built with <span class='color-csharp'>C#</span>, <span class='color-asp'>ASP.NET</span>, <span class='color-html'>HTML</span>, <span class='color-css'>CSS</span>, and <span class='color-sql'>SQL Server</span>. It allows admin users to manage doctors and patients (CRUD), while doctors can view and manage their appointments.",
+      },
+      {
+        t: "GS SCORING",
+        d: "A comprehensive analytical system designed to evaluate the management, financial health, and competitiveness of football clubs through metrics based on structural pillars. Built with <span class='color-python'>Python</span>, <span class='color-fastapi'>FastAPI</span>, <span class='color-sqlalchemy'>SQLAlchemy</span>, <span class='color-react'>React</span>, <span class='color-next'>Next.js</span>, <span class='color-js'>JavaScript</span>, and <span class='color-tailwind'>Tailwind</span>.",
       },
     ],
     contact: { title: "GET IN TOUCH", sub: "REACH ME!", name: "Your name", email: "youremail@example.com", message: "Message", send: "SEND" },
@@ -57,7 +59,7 @@ export const i18n = {
       hi: "Hola, soy",
       title: "Soy un desarrollador web front-end!",
       cv: "CV",
-      cvUrl: "https://drive.google.com/file/d/1uMIo4hikrqJA8UUqZMFI-bKFtnH3KwXI/view?usp=sharing",
+      cvUrl: "https://drive.google.com/file/d/1FtYuSq23XpQSbJeLT6-ZBJPhRRFq_b2f/view?usp=sharing",
     },
     about: {
       title: "SOBRE MÍ",
@@ -87,16 +89,16 @@ export const i18n = {
         d: "Juego de consola estilo tower defense, parodia de Plants vs Zombies, donde los profesores de la facultad reemplazan a los zombies. Hecho en <span class='color-c'>C++</span> y <span class='color-sfml'>SFML</span> para gráficos, sonidos y música.",
       },
       {
-        t: "4 EN RAYA",
-        d: "Juego de consola realizado en <span class='color-c'>C++</span>. Los jugadores se turnan para dejar caer fichas en una cuadrícula vertical, intentando conectar cuatro de sus fichas en una fila horizontal, vertical o diagonal.",
-      },
-      {
-        t: "EL GUAPO DEL PUERTO",
-        d: "Landing page para una parrilla restaurante, hecha con <span class='color-html'>HTML</span>, <span class='color-css'>CSS</span> y <span class='color-js'>JavaScript</span>. Cuenta con un diseño responsivo, muestra del menú e información de contacto.",
+        t: "GR REAL ESTATE",
+        d: "Landing page para una inmobiliaria, hecha con <span class='color-html'>HTML</span>, <span class='color-tailwind'>Tailwind</span> y <span class='color-js'>JavaScript</span>. Cuenta con un diseño responsivo, muestra de propiedades e información de contacto.",
       },
       {
         t: "RR-SCD MED",
         d: "Sistema de gestión de clínica desarrollado con <span class='color-csharp'>C#</span>, <span class='color-asp'>ASP.NET</span>, <span class='color-html'>HTML</span>, <span class='color-css'>CSS</span> y <span class='color-sql'>SQL Server</span>. Permite a los administradores gestionar médicos y pacientes (ABML), y a los médicos ver y modificar sus turnos.",
+      },
+      {
+        t: "GS SCORING",
+        d: "Sistema analítico integral diseñado para evaluar la gestión, salud financiera y competitividad de clubes de fútbol mediante métricas basadas en pilares estructurales. Desarrollado con <span class='color-python'>Python</span>, <span class='color-fastapi'>FastAPI</span>, <span class='color-sqlalchemy'>SQLAlchemy</span>, <span class='color-react'>React</span>, <span class='color-next'>Next.js</span>, <span class='color-js'>JavaScript</span> y <span class='color-tailwind'>Tailwind</span>.",
       },
     ],
     contact: { title: "CONTACTAME", sub: "ENVIAME UN MENSAJE!", name: "Tu nombre", email: "tuemail@ejemplo.com", message: "Mensaje", send: "ENVIAR" },
@@ -106,9 +108,9 @@ export const i18n = {
 
 // Datos que no dependen del idioma
 export const socials = [
-  { href: "https://www.linkedin.com/in/guidoscotti/", img: "linkedinblanco.png", alt: "linkedin", w: 38 },
-  { href: "https://mail.google.com/mail/?view=cm&fs=1&to=scottigui@gmail.com", img: "mailblanco.png", alt: "mail", w: 34 },
-  { href: "https://github.com/guido-scotti", img: "githubblanco.png", alt: "github", w: 30 },
+  { href: "https://www.linkedin.com/in/guidoscotti/", icon: "fa-brands fa-linkedin", alt: "linkedin" },
+  { href: "https://mail.google.com/mail/?view=cm&fs=1&to=scottigui@gmail.com", icon: "fa-solid fa-envelope", alt: "mail" },
+  { href: "https://github.com/guido-scotti", icon: "fa-brands fa-github", alt: "github" },
 ];
 
 // [nombre, color del brillo]
@@ -125,8 +127,8 @@ export const edu = [
 ];
 
 export const projects = [
-  { img: "pvz2.png", alt: "Plants vs Profes", repo: "https://github.com/Lolociriaco/PlantasVsProfes" },
-  { img: "cuatroraya.png", alt: "Cuatro en raya", repo: "https://github.com/luka-raffo/UTN4EnRaya" },
-  { img: "guapo.png", alt: "Guapo", repo: "https://github.com/guido-scotti/El-Guapo-Del-Puerto", web: "http://elguapodelpuerto.com.ar/" },
-  { img: "clinica2.png", alt: "TP Clinica", repo: "https://github.com/Lolociriaco/TP_Clinica" },
+  { imgs: ["pvz2.png", "pvz.png", "pvz4.png"], alt: "Plants vs Profes", repo: "https://github.com/Lolociriaco/PlantasVsProfes" },
+  { imgs: ["grrealestate1.png", "grrealestate2.png", "grrealestate3.png"], alt: "GR Real Estate", repo: "https://github.com/guido-scotti/GR-Real-Estate", web: "https://www.gracielaramos.com/" },
+  { imgs: ["clinica2.png", "clinica.png", "clinica3.png"], alt: "TP Clinica", repo: "https://github.com/Lolociriaco/TP_Clinica" },
+  { imgs: ["gsscoring1.jpg", "gsscoring2.jpg", "gsscoring3.jpg"], alt: "GS Scoring", repo: "https://github.com/marianos2024/gst-scoring-engine" },
 ];
